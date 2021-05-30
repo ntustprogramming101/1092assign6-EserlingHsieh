@@ -1,6 +1,6 @@
 class Item {
+  float x,y;
 	boolean isAlive;
-	float x, y;
 	float w = SOIL_SIZE;
 	float h = SOIL_SIZE;
 

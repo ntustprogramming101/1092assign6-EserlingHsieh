@@ -10,7 +10,6 @@ class Laser {
 	void update(){
 
 		if(!isAlive) return;
-
 		x += cos(angle) * speed;
 		y += sin(angle) * speed;
 	}
@@ -18,7 +17,6 @@ class Laser {
 	void display(){
 
 		if(!isAlive) return;
-
 		strokeWeight(10);
 		stroke(255, 0, 0);
 		if(dist(x, y, originX, originY) <= maxLength){
@@ -38,6 +36,8 @@ class Laser {
 	}
 
 	void fire(float originX, float originY, float targetX, float targetY){
+    this.originX = originX;
+    this.originY = originY;
 		this.x = this.originX = originX;
 		this.y = this.originY = originY;
 		angle = atan2(targetY - y, targetX - x);
